@@ -1,0 +1,42 @@
+{
+  "name": "@360advisor/frontend",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Carlos Azaustre <cazaustre@gmail.com> (https://youtube.com/carlosazaustre)",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1"
+  },
+  "husky": {
+    "hooks": {
+        "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{css,less,scss,html,json,jsx,js}": [
+        "prettier --write ."
+    ],
+    "*.js": "eslint --fix"
+  },
+  "browserslist": {
+    "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+    ],
+    "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+    ]
+  }
+}
